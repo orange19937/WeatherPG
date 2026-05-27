@@ -2,7 +2,7 @@
 
 const axios = require("axios");
 
-const API_key = "3f935d39a3922369fbd9bcdcb7910f92";
+const API_key = "";
 
 const CITY = "Osaka";
 
