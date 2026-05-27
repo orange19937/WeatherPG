@@ -112,6 +112,12 @@ ipch/
 *.VC.db
 *.VC.VC.opendb
 
+
+*.exe
+
+
+
+
 # Visual Studio profiler
 *.psess
 *.vsp
@@ -361,3 +367,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+
+
+
