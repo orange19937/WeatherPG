@@ -18,7 +18,8 @@ const axios = require("axios");
 const API_KEY = "3f935d39a3922369fbd9bcdcb7910f92";
 
 // 天気を取得したい都市
-const CITY = "Ibaraki";
+//主要都市を求めてるため、北海道ではなく札幌
+const CITY = "Osaka";
 
 
 
@@ -60,11 +61,17 @@ async function getWeather() {
         const temp = data.main.temp;
         const humidity = data.main.humidity;
 
+
+        const icon = data.weather[0].icon;
+        const url = `https://openweathermap.org/payload/api/media/file/${icon}@2x.png`;
+
+
         // 表示
         console.log("都市:", CITY);
         console.log("天気:", weather);
         console.log("気温:", temp + "℃");
         console.log("湿度:", humidity + "%");
+        console.log(url);
 
     } catch (error) {
 
@@ -81,5 +88,6 @@ async function getWeather() {
 // 関数実行
 getWeather();
 
+//OpenWeatherMap API
 //node C:\Users\2260006\Documents\天気プログラム\PgTenki\Tenki.cjs
 //path取得はファイル右クリックからpathのコピーからするべき。
